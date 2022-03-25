@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/informatika/infa_project/first_attempt/Map.cpp
+Map.h
+D:/informatika/infa_project/first_attempt/Map.h
+
+D:/informatika/infa_project/first_attempt/Map.h
+
+D:/informatika/infa_project/first_attempt/Map_Draw.cpp
+Map_Draw.h
+D:/informatika/infa_project/first_attempt/Map_Draw.h
+
+D:/informatika/infa_project/first_attempt/Map_Draw.h
+
+D:/informatika/infa_project/first_attempt/Points.cpp
+Points.h
+D:/informatika/infa_project/first_attempt/Points.h
+
+D:/informatika/infa_project/first_attempt/Points.h
+
+D:/informatika/infa_project/first_attempt/main.cpp
+iostream
+-
+
