@@ -1,3 +1,7 @@
+
+//класс отвечает за то, как будет отрисовываться вся картинка проекта
+//в Display происходит все действо
+
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <cassert>

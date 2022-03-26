@@ -1,6 +1,3 @@
-//
-// Created by п on 25.03.2022.
-//
 
 #include "Points_Draw.h"
 Points_Draw::Points_Draw(Points &point) {

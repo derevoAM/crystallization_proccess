@@ -1,7 +1,8 @@
 //
 // Created by п on 24.03.2022.
 //
-
+//Класс отвечающий за то что будет происходить с кружочками
+//Точнее за то, какие значения они будут принимать, хранить данные о каждом кружочке
 #ifndef FIRST_ATTEMPT_POINTS_H
 #define FIRST_ATTEMPT_POINTS_H
 #include <iostream>

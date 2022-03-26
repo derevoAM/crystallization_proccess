@@ -1,7 +1,8 @@
 //
 // Created by п on 24.03.2022.
 //
-
+//Это класс отвечающий за карту и что происходит с кружочкам,
+// думаю это главный класс, в котором  будет вся математика( я так вижу)
 #ifndef FIRST_ATTEMPT_MAP_H
 #define FIRST_ATTEMPT_MAP_H
 #include "Points.h"

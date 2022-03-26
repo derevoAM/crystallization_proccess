@@ -1,6 +1,4 @@
-//
-// Created by п on 25.03.2022.
-//
+//Класс который отвечает за  отрисовку кружочков, в зависимости от параметров кружочков
 
 #ifndef FIRST_ATTEMPT_POINTS_DRAW_H
 #define FIRST_ATTEMPT_POINTS_DRAW_H
