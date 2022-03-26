@@ -102,6 +102,12 @@
 		<Unit filename="D:/informatika/infa_project/first_attempt/Points.h">
 			<Option target="first_attempt"/>
 		</Unit>
+		<Unit filename="D:/informatika/infa_project/first_attempt/Points_Draw.cpp">
+			<Option target="first_attempt"/>
+		</Unit>
+		<Unit filename="D:/informatika/infa_project/first_attempt/Points_Draw.h">
+			<Option target="first_attempt"/>
+		</Unit>
 		<Unit filename="D:/informatika/infa_project/first_attempt/main.cpp">
 			<Option target="first_attempt"/>
 		</Unit>

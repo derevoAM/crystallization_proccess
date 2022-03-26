@@ -5,19 +5,19 @@
 #include <ctime>
 #include <cmath>
 #include <algorithm>
+#include "Points_Draw.h"
+
 #ifndef FIRST_ATTEMPT_MAP_DRAW_H
 #define FIRST_ATTEMPT_MAP_DRAW_H
 
-template<typename T>
-class Map_Draw {
+
+class Map_Draw: protected Map, protected Points_Draw {
 private:
-    sf::RenderWindow window;
+    Map map;
 public:
-    Map_Draw(T Width,T Height);
-void Creat_Window(T, T);
-void Creat_Shapes(T);
-void Set_Position(T, T);
-void Display();
+    Map_Draw(Map& map);
+    ~Map_Draw() = default;
+    void Display();
 };
 
 

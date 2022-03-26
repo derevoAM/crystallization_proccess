@@ -223,6 +223,33 @@ Points.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\first_attempt.dir\build.make CMakeFiles/first_attempt.dir/Points.cpp.s
 .PHONY : Points.cpp.s
 
+Points_Draw.obj: Points_Draw.cpp.obj
+
+.PHONY : Points_Draw.obj
+
+# target to build an object file
+Points_Draw.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\first_attempt.dir\build.make CMakeFiles/first_attempt.dir/Points_Draw.cpp.obj
+.PHONY : Points_Draw.cpp.obj
+
+Points_Draw.i: Points_Draw.cpp.i
+
+.PHONY : Points_Draw.i
+
+# target to preprocess a source file
+Points_Draw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\first_attempt.dir\build.make CMakeFiles/first_attempt.dir/Points_Draw.cpp.i
+.PHONY : Points_Draw.cpp.i
+
+Points_Draw.s: Points_Draw.cpp.s
+
+.PHONY : Points_Draw.s
+
+# target to generate assembly for a file
+Points_Draw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\first_attempt.dir\build.make CMakeFiles/first_attempt.dir/Points_Draw.cpp.s
+.PHONY : Points_Draw.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -268,6 +295,9 @@ help:
 	@echo ... Points.obj
 	@echo ... Points.i
 	@echo ... Points.s
+	@echo ... Points_Draw.obj
+	@echo ... Points_Draw.i
+	@echo ... Points_Draw.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

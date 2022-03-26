@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/first_attempt.dir/Map.cpp.obj"
   "CMakeFiles/first_attempt.dir/Map_Draw.cpp.obj"
   "CMakeFiles/first_attempt.dir/Points.cpp.obj"
+  "CMakeFiles/first_attempt.dir/Points_Draw.cpp.obj"
   "CMakeFiles/first_attempt.dir/main.cpp.obj"
   "first_attempt.exe"
   "first_attempt.exe.manifest"

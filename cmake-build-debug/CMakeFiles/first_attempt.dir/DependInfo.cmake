@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "D:/informatika/infa_project/first_attempt/Map.cpp" "D:/informatika/infa_project/first_attempt/cmake-build-debug/CMakeFiles/first_attempt.dir/Map.cpp.obj"
   "D:/informatika/infa_project/first_attempt/Map_Draw.cpp" "D:/informatika/infa_project/first_attempt/cmake-build-debug/CMakeFiles/first_attempt.dir/Map_Draw.cpp.obj"
   "D:/informatika/infa_project/first_attempt/Points.cpp" "D:/informatika/infa_project/first_attempt/cmake-build-debug/CMakeFiles/first_attempt.dir/Points.cpp.obj"
+  "D:/informatika/infa_project/first_attempt/Points_Draw.cpp" "D:/informatika/infa_project/first_attempt/cmake-build-debug/CMakeFiles/first_attempt.dir/Points_Draw.cpp.obj"
   "D:/informatika/infa_project/first_attempt/main.cpp" "D:/informatika/infa_project/first_attempt/cmake-build-debug/CMakeFiles/first_attempt.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

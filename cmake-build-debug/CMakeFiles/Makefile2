@@ -93,12 +93,12 @@ clean: CMakeFiles/first_attempt.dir/clean
 CMakeFiles/first_attempt.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\first_attempt.dir\build.make CMakeFiles/first_attempt.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\first_attempt.dir\build.make CMakeFiles/first_attempt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\informatika\infa_project\first_attempt\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5 "Built target first_attempt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\informatika\infa_project\first_attempt\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6 "Built target first_attempt"
 .PHONY : CMakeFiles/first_attempt.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/first_attempt.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\informatika\infa_project\first_attempt\cmake-build-debug\CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\informatika\infa_project\first_attempt\cmake-build-debug\CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/first_attempt.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\informatika\infa_project\first_attempt\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/first_attempt.dir/rule
