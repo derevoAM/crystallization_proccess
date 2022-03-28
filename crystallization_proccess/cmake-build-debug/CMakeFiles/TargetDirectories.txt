@@ -1,0 +1,3 @@
+C:/programming/2_sem/crystallization_proccess/cmake-build-debug/CMakeFiles/first_attempt.dir
+C:/programming/2_sem/crystallization_proccess/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/programming/2_sem/crystallization_proccess/cmake-build-debug/CMakeFiles/rebuild_cache.dir
