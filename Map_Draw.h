@@ -9,17 +9,17 @@
 #include <ctime>
 #include <cmath>
 #include <algorithm>
-#include "Points_Draw.h"
+#include "Cells_Draw.h"
 
 #ifndef FIRST_ATTEMPT_MAP_DRAW_H
 #define FIRST_ATTEMPT_MAP_DRAW_H
 
 
-class Map_Draw: protected Map, protected Points_Draw {
+class Map_Draw {
 private:
     Map map;
 public:
-    Map_Draw(Map& map);
+    Map_Draw(Map&);
     ~Map_Draw() = default;
     void Display();
 };
