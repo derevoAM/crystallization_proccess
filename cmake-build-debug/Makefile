@@ -67,10 +67,10 @@ RM = "D:\CLion 2020.2\bin\cmake\win\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\informatika\infa_project\first_attempt
+CMAKE_SOURCE_DIR = D:\informatika\infa_project\misha_attempt2\crystallization_proccess
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\informatika\infa_project\first_attempt\cmake-build-debug
+CMAKE_BINARY_DIR = D:\informatika\infa_project\misha_attempt2\crystallization_proccess\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -99,9 +99,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\informatika\infa_project\first_attempt\cmake-build-debug\CMakeFiles D:\informatika\infa_project\first_attempt\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\informatika\infa_project\misha_attempt2\crystallization_proccess\cmake-build-debug\CMakeFiles D:\informatika\infa_project\misha_attempt2\crystallization_proccess\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\informatika\infa_project\first_attempt\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\informatika\infa_project\misha_attempt2\crystallization_proccess\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -141,6 +141,60 @@ first_attempt: cmake_check_build_system
 first_attempt/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\first_attempt.dir\build.make CMakeFiles/first_attempt.dir/build
 .PHONY : first_attempt/fast
+
+Cells.obj: Cells.cpp.obj
+
+.PHONY : Cells.obj
+
+# target to build an object file
+Cells.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\first_attempt.dir\build.make CMakeFiles/first_attempt.dir/Cells.cpp.obj
+.PHONY : Cells.cpp.obj
+
+Cells.i: Cells.cpp.i
+
+.PHONY : Cells.i
+
+# target to preprocess a source file
+Cells.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\first_attempt.dir\build.make CMakeFiles/first_attempt.dir/Cells.cpp.i
+.PHONY : Cells.cpp.i
+
+Cells.s: Cells.cpp.s
+
+.PHONY : Cells.s
+
+# target to generate assembly for a file
+Cells.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\first_attempt.dir\build.make CMakeFiles/first_attempt.dir/Cells.cpp.s
+.PHONY : Cells.cpp.s
+
+Cells_Draw.obj: Cells_Draw.cpp.obj
+
+.PHONY : Cells_Draw.obj
+
+# target to build an object file
+Cells_Draw.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\first_attempt.dir\build.make CMakeFiles/first_attempt.dir/Cells_Draw.cpp.obj
+.PHONY : Cells_Draw.cpp.obj
+
+Cells_Draw.i: Cells_Draw.cpp.i
+
+.PHONY : Cells_Draw.i
+
+# target to preprocess a source file
+Cells_Draw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\first_attempt.dir\build.make CMakeFiles/first_attempt.dir/Cells_Draw.cpp.i
+.PHONY : Cells_Draw.cpp.i
+
+Cells_Draw.s: Cells_Draw.cpp.s
+
+.PHONY : Cells_Draw.s
+
+# target to generate assembly for a file
+Cells_Draw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\first_attempt.dir\build.make CMakeFiles/first_attempt.dir/Cells_Draw.cpp.s
+.PHONY : Cells_Draw.cpp.s
 
 Map.obj: Map.cpp.obj
 
@@ -223,33 +277,6 @@ Points.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\first_attempt.dir\build.make CMakeFiles/first_attempt.dir/Points.cpp.s
 .PHONY : Points.cpp.s
 
-Points_Draw.obj: Points_Draw.cpp.obj
-
-.PHONY : Points_Draw.obj
-
-# target to build an object file
-Points_Draw.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\first_attempt.dir\build.make CMakeFiles/first_attempt.dir/Points_Draw.cpp.obj
-.PHONY : Points_Draw.cpp.obj
-
-Points_Draw.i: Points_Draw.cpp.i
-
-.PHONY : Points_Draw.i
-
-# target to preprocess a source file
-Points_Draw.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\first_attempt.dir\build.make CMakeFiles/first_attempt.dir/Points_Draw.cpp.i
-.PHONY : Points_Draw.cpp.i
-
-Points_Draw.s: Points_Draw.cpp.s
-
-.PHONY : Points_Draw.s
-
-# target to generate assembly for a file
-Points_Draw.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\first_attempt.dir\build.make CMakeFiles/first_attempt.dir/Points_Draw.cpp.s
-.PHONY : Points_Draw.cpp.s
-
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -286,6 +313,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... first_attempt
+	@echo ... Cells.obj
+	@echo ... Cells.i
+	@echo ... Cells.s
+	@echo ... Cells_Draw.obj
+	@echo ... Cells_Draw.i
+	@echo ... Cells_Draw.s
 	@echo ... Map.obj
 	@echo ... Map.i
 	@echo ... Map.s
@@ -295,9 +328,6 @@ help:
 	@echo ... Points.obj
 	@echo ... Points.i
 	@echo ... Points.s
-	@echo ... Points_Draw.obj
-	@echo ... Points_Draw.i
-	@echo ... Points_Draw.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

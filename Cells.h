@@ -24,6 +24,7 @@ protected:
     std::pair<double, double> coordinates;
     bool state; // state = 1 - if crystallized, otherwise state = 0
     double solution;
+    double next_step_solution;
     double impurity;
     double crys_prob; // crystallization probability
     double dis_prob; // dissolution probability
@@ -56,6 +57,9 @@ public:
     void Set_solution(double solution) {
         this->solution = solution;
     }
+    void Set_next_step_solution( double next_step_solution){
+        this->next_step_solution = next_step_solution;
+    }
 
     void Set_crys_rate_prob(){
         crys_rate = basic_rate * (solution * (max_density - equilibrium_concentration)) /
@@ -81,7 +85,9 @@ public:
     double Get_impurity() const {
         return this->impurity;
     }
-
+    double  Get_next_step_solution() const{
+        return next_step_solution;
+    };
     double Get_solution() const {
         return this->solution;
     }

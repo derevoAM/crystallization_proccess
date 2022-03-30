@@ -29,7 +29,7 @@ void Map_Draw::Display() {
         //draw moving particles
         for (std::size_t i = 0; i < map.Get_number_of_Cells(); i++) {
             Cells_Draw circle(map.Get_cell_i(i));
-            window.draw(circle.Get_circle());
+            window.draw(circle.Get_circle(), 1, sf::Points);
         }
         window.display();
     }

@@ -1,4 +1,4 @@
-# Install script for directory: D:/informatika/infa_project/first_attempt
+# Install script for directory: D:/informatika/infa_project/misha_attempt2/crystallization_proccess
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/informatika/infa_project/first_attempt/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/informatika/infa_project/misha_attempt2/crystallization_proccess/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -14,7 +14,6 @@ protected:
     unsigned Height;
     unsigned Width;
     unsigned number_of_Cells;
-    double tot_solution = 0;
     std::vector<Cells> cell;
 public:
     Map();
@@ -43,7 +42,12 @@ public:
         cell[i].Set_solution(solution);
         //cell[i].Set_impurity(max_density - solution);
     }
-
+    void Set_cell_next_step_solution(unsigned i, double next_step_solution){
+        cell[i].Set_next_step_solution(next_step_solution);
+    }
+    double Get_cell_next_step_solution(unsigned i){
+        return cell[i].Get_next_step_solution();
+    }
     std::pair<double, double> Get_cell_coordinates(unsigned i) const {
         return cell[i].Get_coordinates();
     }

@@ -10,12 +10,12 @@ class Cells_Draw {
 protected:
     sf::Color color_free = sf::Color(255, 0, 0, 200);
     sf::Color color_crystal = sf::Color(0, 255, 0, 255);
-    sf::CircleShape circle;
+    sf::Vertex circle[];
 public:
 
     Cells_Draw(Cells &cell);
 
-    sf::CircleShape Get_circle() {
+    sf::Vertex *Get_circle() {
         return circle;
     };
 

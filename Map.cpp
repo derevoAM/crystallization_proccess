@@ -36,27 +36,7 @@ Map &Map::operator=(const Map &map) {
 }
 
 
-//присваиваю теплоемкости рандомное значение, никакой математики, просто рандомом балуюсь
-//void Map::Set_cell_concentration_capacity_iterative() {
-//unsigned seed = std::chrono::steady_clock::now().time_since_epoch().count();
-//    std::default_random_engine e(seed);
-//
-//    std::random_device rd;
-//    std::mt19937 gen(seed);
-//    std::uniform_int_distribution<int> distrib(1, 100);
-//    for (unsigned i = 0; i < Height; i += 10) {
-//        for (unsigned j = 0; j < Width; j += 10) {
-//
-//            Set_cell_concentration_capacity(i / 10 * Width / 10 + j / 10,
-//                                   distrib(gen));//вообще это можно сделать в конструкторе cell
-//        }
-//    }
 
-
-
-//}
-
-// спорная фигня, прости кружочкам даю координаты, где то можно как то в конструктор сунуть, но хз пусть так
 void Map::Set_cell_origin() {
     unsigned seed = std::chrono::steady_clock::now().time_since_epoch().count();
     std::default_random_engine e(seed);
@@ -67,17 +47,15 @@ void Map::Set_cell_origin() {
     for (unsigned i = 0; i < Height; i += 2) {
         for (unsigned j = 0; j < Width; j += 2) {
             if (i / 2 * Width / 2 + j / 2 < number_of_Cells) {
-                double prob = distrib(gen);
                 Set_cell_coordinates(i / 2 * Width / 2 + j / 2, j, i);
-                cell[i / 2 * Width / 2 + j / 2].Set_solution(max_density * prob);
-                tot_solution += max_density * prob;
+                double rand_temp =  distrib(gen);
+                cell[i / 2 * Width / 2 + j / 2].Set_solution(max_density *rand_temp);
                 cell[i / 2 * Width / 2 + j / 2].Set_impurity(max_density - cell[i].Get_solution());
+                cell[i / 2 * Width / 2 + j / 2].Set_next_step_solution(max_density *rand_temp);
                 state = false;
-                std::cout << cell[i / 2 * Width / 2 + j / 2].Get_solution() << " ";
             }
         }
     }
-    std::cout << "\n" << tot_solution << "\n";
 }
 
 /*
@@ -120,50 +98,32 @@ void Map::Differential_equation_iteration1() {
     std::cout << "\n";
 }*/
 
-
+//Тут чуть подправил, идея в чем:
+//Завели новую поле со значением следущего шага
+//И присваиваем значение для следущего шага
 void Map::Differential_equation_iteration2() {
-    Map map1(Height, Width, number_of_Cells);
     double total_solution = 0.0;
-    //double total_impurity = 0.0;
-    double x = 0, y = 0;
-    map1 = *this;
-//    for(int i = 0; i < number_of_Cells; i ++)
-//    {
-//        std::cout << cell[i].Get_solution() << " ";
-//    }
-//    std::cout << "\n";
+    std::pair<double, double> coordinates_temp;
     for (int i = 0; i < number_of_Cells; i++) {
         total_solution = 0.0;
-        total_solution = Get_cell_solution(i) * (1 - 4 * diffusion_coef * dt / (dx * dx));
-        //total_impurity = Get_cell_impurity(i) * (1 - 4 * diffusion_coef) * dt / (dx * dx);
-        x = Get_cell_coordinates(i).first;
-        y = Get_cell_coordinates(i).second;
-        if (x - 2 >= 0) {
+        Set_cell_solution(i, Get_cell_next_step_solution(i));
+        total_solution = Get_cell_next_step_solution(i)* (1 - 4 * diffusion_coef * dt / (dx * dx));
+        coordinates_temp.first = Get_cell_coordinates(i).first;
+        coordinates_temp.second = Get_cell_coordinates(i).second;
+        if (coordinates_temp.first - 2 >= 0) {
             total_solution += Get_cell_solution(i - 1) * diffusion_coef * dt / (dx * dx);
-            //total_impurity += Get_cell_impurity(i - 1) * diffusion_coef * dt / (dx * dx);
         }
-        if (x + 2 <= Width - 2) {
-            total_solution += Get_cell_solution(i + 1) * diffusion_coef * dt / (dx * dx);
-            //total_impurity += Get_cell_impurity(i + 1) * diffusion_coef * dt / (dx * dx);
+        if (coordinates_temp.first + 2 <= Width - 2) {
+            total_solution += Get_cell_next_step_solution(i + 1) * diffusion_coef * dt / (dx * dx);
         }
-        if (y - 2 >= 0) {
+        if (coordinates_temp.second - 2 >= 0) {
             total_solution += Get_cell_solution(i - Width / 2) * diffusion_coef * dt / (dx * dx);
-            //total_impurity += Get_cell_impurity(i - Width / 2) * diffusion_coef * dt / (dx * dx);
         }
-        if (y + 2 <= Height - 2) {
-            total_solution += Get_cell_solution(i + Width / 2) * diffusion_coef * dt / (dx * dx);
-            //total_impurity += Get_cell_impurity(i + Width / 2) * diffusion_coef * dt / (dx * dx);
+        if (coordinates_temp.second + 2 <= Height - 2) {
+            total_solution += Get_cell_next_step_solution(i + Width / 2) * diffusion_coef * dt / (dx * dx);
         }
-        map1.Set_cell_solution(i, total_solution);
-        //Set_impurity(total_impurity);
+        Set_cell_next_step_solution(i, total_solution);
     }
-
-    for(int i = 0; i < number_of_Cells; i ++)
-    {
-        std::cout << cell[i].Get_solution() << " ";
-    }
-    std::cout << "\n";
-    *this = map1;
 }
 
 void Map::Crystallization_dissolution_check() {

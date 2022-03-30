@@ -4,11 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/informatika/infa_project/first_attempt/Map.cpp" "D:/informatika/infa_project/first_attempt/cmake-build-debug/CMakeFiles/first_attempt.dir/Map.cpp.obj"
-  "D:/informatika/infa_project/first_attempt/Map_Draw.cpp" "D:/informatika/infa_project/first_attempt/cmake-build-debug/CMakeFiles/first_attempt.dir/Map_Draw.cpp.obj"
-  "D:/informatika/infa_project/first_attempt/Points.cpp" "D:/informatika/infa_project/first_attempt/cmake-build-debug/CMakeFiles/first_attempt.dir/Points.cpp.obj"
-  "D:/informatika/infa_project/first_attempt/Points_Draw.cpp" "D:/informatika/infa_project/first_attempt/cmake-build-debug/CMakeFiles/first_attempt.dir/Points_Draw.cpp.obj"
-  "D:/informatika/infa_project/first_attempt/main.cpp" "D:/informatika/infa_project/first_attempt/cmake-build-debug/CMakeFiles/first_attempt.dir/main.cpp.obj"
+  "D:/informatika/infa_project/misha_attempt2/crystallization_proccess/Cells.cpp" "D:/informatika/infa_project/misha_attempt2/crystallization_proccess/cmake-build-debug/CMakeFiles/first_attempt.dir/Cells.cpp.obj"
+  "D:/informatika/infa_project/misha_attempt2/crystallization_proccess/Cells_Draw.cpp" "D:/informatika/infa_project/misha_attempt2/crystallization_proccess/cmake-build-debug/CMakeFiles/first_attempt.dir/Cells_Draw.cpp.obj"
+  "D:/informatika/infa_project/misha_attempt2/crystallization_proccess/Map.cpp" "D:/informatika/infa_project/misha_attempt2/crystallization_proccess/cmake-build-debug/CMakeFiles/first_attempt.dir/Map.cpp.obj"
+  "D:/informatika/infa_project/misha_attempt2/crystallization_proccess/Map_Draw.cpp" "D:/informatika/infa_project/misha_attempt2/crystallization_proccess/cmake-build-debug/CMakeFiles/first_attempt.dir/Map_Draw.cpp.obj"
+  "D:/informatika/infa_project/misha_attempt2/crystallization_proccess/Points.cpp" "D:/informatika/infa_project/misha_attempt2/crystallization_proccess/cmake-build-debug/CMakeFiles/first_attempt.dir/Points.cpp.obj"
+  "D:/informatika/infa_project/misha_attempt2/crystallization_proccess/main.cpp" "D:/informatika/infa_project/misha_attempt2/crystallization_proccess/cmake-build-debug/CMakeFiles/first_attempt.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

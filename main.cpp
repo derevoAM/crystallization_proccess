@@ -5,7 +5,10 @@ double Cells::max_density = 2;
 double Cells::equilibrium_concentration = 1;
 double Cells::basic_rate = 0.1;
 double Cells::diffusion_coef = 1;
-
+template <typename T>
+int Max_number (T Height, T Width, int step){
+    return (Height*Width/step)/step;
+}
 int main() {
     unsigned Height = 8;
     unsigned Width = 8;
